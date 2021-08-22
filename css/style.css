@@ -359,7 +359,7 @@ ul {
   opacity: 1;
   top: 50%;
   left: 50%;
-
+  padding: 40px;
   width: 528px;
   height: 581px;
   background-color: rgba(255, 255, 255, 1);
@@ -393,7 +393,7 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-close:focus-within  {
+.modal-close:focus-within > .vector {
   fill: var(--link-text-color);
 }
 
@@ -401,14 +401,14 @@ ul {
   position: absolute;
   top: 50%;
   right: 50%;
+
   transform: translate(-50%, -50%);
   fill: rgba(0, 0, 0, 1);
 
   transition: fill 250ms var(--cubic);
 }
-
-.form {
-  margin: 12px 40px 20px 40px;
+.vector:hover {
+  fill: var(--link-text-color);
 }
 
 .form-title {
@@ -418,68 +418,76 @@ ul {
   text-align: center;
   color: var(--title-text-color);
 
-  margin: 40px 40px 12px 40px;
+  margin-bottom: 40px;
 }
 
-.form-item {
+.form {
   position: relative;
   display: flex;
   flex-direction: column;
   font-size: 12px;
   line-height: 1.16;
   color: var(--main-text-color);
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   align-content: center;
 }
 
-.form-item input {
-  margin-bottom: 10px;
+.form input {
+  width: 100%;
   height: 40px;
 }
 
-.form-item label {
+.form label {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   margin-bottom: 4px;
 }
-
+.form-item {
+  position: relative;
+}
 .form-input {
   position: relative;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px; 
+  border-radius: 4px;
   outline: none;
 }
 .form-input:focus {
-  border-color: #2196f3;
+  border-color: var(--link-text-color);
 }
-
 
 .form-svg {
-  position: absolute;
-  top: 35%;
-  left: 12px;
-  margin: 11px 12px;
-
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
   width: 18px;
   height: 18px;
-  fill: #212121;
+  fill: var(--title-text-color);
 
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
 }
-.form-item:focus-within > .form-svg  {
+.form-svg:focus {
   fill: var(--link-text-color);
-  
+}
+
+.form-item:focus-within > .form-svg {
+  fill: var(--link-text-color);
+  border-color: var(--link-text-color);
 }
 textarea {
   resize: none;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+  padding-left: 10px;
 }
-
-
+textarea:focus {
+  border-color: var(--link-text-color);
+}
 
 .form-terms {
   font-size: 14px;
@@ -492,36 +500,40 @@ textarea {
   margin-bottom: 30px;
 }
 .checkbox {
-  -webkit-appearance: none ;
-  -moz-appearance: none ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 .icon-check {
   position: relative;
   display: inline-block;
-  width: 16px; 
+  width: 16px;
   height: 15px;
   margin-right: 7px;
-  
 
-  border: 1.75px solid var(--title-text-color); 
+  border: 1.75px solid var(--title-text-color);
   border-radius: 2px;
-}
 
+  transition: border-color 250ms var(--cubic);
+}
+.icon-check:focus {
+  border-color: var(--link-text-color);
+}
 .icon {
   position: absolute;
   top: -2px;
-  left: -2px; 
+  left: -2px;
   width: 15px;
   height: 15px;
   fill: var(--white-color);
   border-radius: 2px;
-  
 }
 
+/* .checkbox:focus + .icon-check, */
 .checkbox:checked + .icon-check {
   background-color: var(--link-text-color);
   border-color: var(--link-text-color);
+  /* background-image: url(../images-main/check.svg); */
 }
 
 .link-terms {
@@ -807,7 +819,7 @@ textarea {
 
 /* subscribe*/
 
-.subscribe  {
+.subscribe {
   margin-left: 93px;
 }
 .subscribe-mail {
@@ -836,7 +848,7 @@ textarea {
 }
 
 .subscribe-button {
-  display: inline-flex  ;
+  display: inline-flex;
   align-items: center;
   text-align: center;
   justify-content: space-evenly;
@@ -852,7 +864,7 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: var(--link-text-color);
-  transition: color 250ms var(--cubic); 
+  transition: color 250ms var(--cubic);
 }
 
 .subscribe-button:focus {
