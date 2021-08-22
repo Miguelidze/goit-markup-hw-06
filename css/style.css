@@ -528,18 +528,22 @@ textarea:focus {
   fill: var(--white-color);
   border-radius: 2px;
 }
+.icon-check:focus {
+  border-color: var(--link-text-color );
+}
 
-/* .checkbox:focus + .icon-check, */
+.checkbox:focus ,
 .checkbox:checked + .icon-check {
   background-color: var(--link-text-color);
   border-color: var(--link-text-color);
-  /* background-image: url(../images-main/check.svg); */
+  /* background-image: url(../images-main/SVG/icon-check.svg); */
 }
 
 .link-terms {
   text-decoration: underline;
   color: var(--link-text-color);
-  margin-left: 1px;
+  margin-left: 2px;
+  cursor: pointer;
 }
 
 .button-submit {
