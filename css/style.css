@@ -382,7 +382,10 @@ ul {
 }
 
 .modal-close {
+  display: flex;
   position: absolute;
+  align-items: center;
+  justify-items: center ;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -516,27 +519,19 @@ textarea:focus {
 
   transition: border-color 250ms var(--cubic);
 }
+
 .icon-check:focus {
   border-color: var(--link-text-color);
-}
-.icon {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 15px;
-  height: 15px;
-  fill: var(--white-color);
-  border-radius: 2px;
-}
-.icon-check:focus {
-  border-color: var(--link-text-color );
 }
 
-.checkbox:focus ,
 .checkbox:checked + .icon-check {
   background-color: var(--link-text-color);
-  border-color: var(--link-text-color);
-  /* background-image: url(../images-main/SVG/icon-check.svg); */
+  background-image: url(../images-main/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.checkbox:focus + .icon-check {
+border-color: var(--link-text-color);
 }
 
 .link-terms {
