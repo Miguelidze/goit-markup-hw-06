@@ -9,7 +9,6 @@
   --button-color: #f5f4fa;
   --main-text-family: roboto, sans-serif;
   --main-text-weight: 400;
-  /*--svg-color: #afb1b8;*/
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -50,7 +49,6 @@ ul {
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
-  /*outline: 2px solid tomato;*/
 }
 
 /* шапка страницы с навигацией*/
